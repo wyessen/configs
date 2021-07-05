@@ -1,0 +1,18 @@
+VAGRANT_BOX = 'bento/ubuntu-20.04'
+VM_NAME = 'ubuntu-20.04'
+VM_USER = 'vagrant'
+
+HOST_PATH = '/media/will.yessen/bigdata/vms/vmsync'
+GUEST_PATH = '/home/' + VM_USER + '/vmsync'
+
+Vagrant.configure(2) do |config|
+  config.vm.box = VAGRANT_BOX
+  config.vm.hostname = VM_NAME
+  config.vm.provider "virtualbox" do |v|
+  config.vm.synced_folder HOST_PATH, GUEST_PATH, SharedFoldersEnableSymlinksCreate: false
+    v.name = VM_NAME
+    v.memory = 8192
+    v.gui = false
+    v.cpus = 4
+  end
+end
