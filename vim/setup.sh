@@ -1,6 +1,6 @@
-echo "set -g mouse on" > ~/.tmux.conf 
-echo "set -o vi" > ~/.bashrc 
-echo ":set tabstop=4" > ~/.vimrc 
+echo "set -g mouse on" >> ~/.tmux.conf 
+echo "set -o vi" >> ~/.bashrc 
+echo ":set tabstop=4" >> ~/.vimrc 
 echo ":set expandtab" >> ~/.vimrc 
 echo ":set shiftwidth=4" >> ~/.vimrc 
 echo ":set autoindent" >> ~/.vimrc 
